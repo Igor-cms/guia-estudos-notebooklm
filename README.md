@@ -1,89 +1,87 @@
-# Miniguia de Estudos: Arquitetura RAG e IAs Grounded com NotebookLM
+#  Miniguia de Estudos: Educação Financeira e Finanças Pessoais com NotebookLM
 
-> **Projeto desenvolvido para o Desafio de Aprendizagem Ativa da DIO (Digital Innovation One).**
-> Um guia prático documentando a curadoria de fontes, testes de prompts e consolidação de conhecimento utilizando o NotebookLM da Google.
+> **Projeto desenvolvido para o Desafio de Aprendizagem Ativa da DIO (Digital Innovation One).**  
+> Um caderno temático construído no NotebookLM da Google para organizar conceitos de orçamento, reserva de emergência e planejamento financeiro introdutório.
 
 ---
 
 ##  Contexto e Objetivos
 
 ### Contexto
-O ecossistema de Inteligência Artificial evoluiu rapidamente para modelos baseados em **Retrieval-Augmented Generation (RAG)**, onde a IA responde com base exclusiva em fontes delimitadas de informação. Compreender como alimentar, testar e extrair dados estruturados dessas ferramentas é fundamental para desenvolvedores e profissionais de tecnologia.
+A educação financeira é essencial para tomada de decisões conscientes sobre orçamento, controle de endividamento e construção de patrimônio. Este projeto utiliza o **NotebookLM** como ferramenta de aprendizagem ativa, realizando curadoria de fontes oficiais e aplicando engenharia de prompts para transformar leituras em conhecimento estruturado.
 
 ### Objetivos de Estudo
-1. **Curadoria Prática:** Selecionar artigos e documentações técnicas confiáveis sobre RAG e fine-tuning.
-2. **Engenharia de Prompts:** Testar a capacidade de síntese do NotebookLM e registrar os limites/desafios da IA (troubleshooting).
-3. **Consolidação do Conhecimento:** Gerar um miniguia de consulta rápida contendo resumos, glossário e prompts reutilizáveis para estudos futuros.
+1. **Compreensão de Base:** Dominar conceitos introdutórios como Reserva de Emergência, Regra 50-30-20 e Taxa Selic/Inflação.
+2. **Aprendizagem Ativa com IA:** Utilizar o NotebookLM para sintetizar e cruzar informações das fontes sem alucinações.
+3. **Documentação Prática:** Registrar o processo de refinamento de perguntas (troubleshooting) e criar um guia reutilizável de revisão.
 
 ---
 
 ##  Curadoria de Fontes
 
-Para alimentar o caderno no NotebookLM, foram selecionadas 4 fontes abertas (artigos técnicos e documentações):
+Para alimentar o caderno no NotebookLM, foram selecionadas 4 fontes abertas e confiáveis:
 
-1. **[What is RAG? - AWS Documentation](https://aws.amazon.com/pt/what-is/retrieved-augmented-generation/)**  
-   *Foco:* Conceitos fundamentais de RAG, vetores de busca e integração com LLMs.
-2. **[NotebookLM: Google's AI-Powered Notebook](https://notebooklm.google.com/)**  
-   *Foco:* Documentação funcional da ferramenta e melhores práticas de ancoragem (*grounding*).
-3. **[RAG vs Fine-Tuning - DeepLearning.AI Articles](https://www.deeplearning.ai/)**  
-   *Foco:* Análise comparativa entre atualização de pesos do modelo vs. injeção de contexto em tempo de execução.
-4. **[OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)**  
-   *Foco:* Segurança, vazamento de dados de contexto e injeção de prompts em sistemas baseados em documentos.
+1. **[Caderno de Educação Financeira - Banco Central do Brasil](https://www.bcb.gov.br/)**  
+   *Foco:* Conceitos formais de planejamento, orçamento familiar e uso consciente do crédito.
+2. **[Guia de Proteção ao Investidor - CVM](https://www.investidor.gov.br/)**  
+   *Foco:* Perfis de investimento, risco vs. retorno e fundamentos de renda fixa.
+3. **[Guia Prático da Reserva de Emergência - ANBIMA](https://www.anbima.com.br/)**  
+   *Foco:* Liquidez, rentabilidade básica e onde alocar a reserva.
+4. **[Metodologias de Orçamento Pessoal (Regra 50-30-20)](https://www.serasa.com.br/)**  
+   *Foco:* Divisão prática de renda entre necessidades, desejos e investimentos.
 
 ---
 
-## 🧪 Engenharia de Prompts e "Cicatrizes" (Troubleshooting)
+##  Engenharia de Prompts e "Cicatrizes" (Troubleshooting)
 
-Nesta seção estão registradas as iterações de prompts testadas durante o estudo no NotebookLM, destacando os ajustes necessários para obter respostas precisas.
+Abaixo estão registrados os testes de prompts realizados durante as consultas ao NotebookLM:
 
 ### Iteração 1: Pergunta Geral vs. Pergunta Delimitada
-* **Prompt Inicial (Ingênuo):**  
-  `"O que é RAG e como funciona?"`
-* **Resultado Obtido:**  
-  Resposta genérica citando conceitos de IA sem se prender totalmente aos detalhes técnicos dos documentos anexados.
+* **Prompt Vago (Inicial):**  
+  `"Como eu faço para juntar dinheiro?"`
+* **Resposta Obtida:** Dicas genéricas de internet, sem grounding e sem profundidade.
 * **Prompt Otimizado (Estratégico):**  
-  `"Com base exclusivamente nas fontes anexadas, explique a diferença entre RAG e Fine-Tuning em 3 tópicos diretos. Inclua citações diretas quando possível."`
-* **Resultado Obtido:**  
-  A IA delimitou a resposta estritamente aos textos carregados, gerando uma tabela comparativa exata sem alucinações.
+  `"Com base exclusivamente nas fontes do Banco Central e CVM anexadas, explique o passo a passo para calcular e estruturar uma Reserva de Emergência para um profissional assalariado. Apresente em formato de tópicos."`
+* **Resposta Obtida:** A IA citou exatamente os prazos de cobertura (3 a 6 meses de custo de vida) e apontou os produtos de renda fixa com liquidez diária citados nos manuais.
 
-###  "Cicatrizes" e Aprendizados de Troubleshooting
+### "Cicatrizes" e Aprendizados de Troubleshooting
 
-| Desafio Encontrado | Causa Raiz | Solução Aplicada |
+| Dificuldade Encontrada | Causa | Solução Aplicada |
 | :--- | :--- | :--- |
-| Respostas vagando fora do escopo | O prompt dava margem para o conhecimento geral da LLM. | Forçar a diretiva *"Use apenas os documentos fornecidos"* no início do prompt. |
-| Perda de contexto em perguntas longas | Solicitações com múltiplos comandos confusos. | Quebrar o prompt em etapas (primeiro resumo, depois extração de tabela, depois glossário). |
-| Resumo muito genérico | Falta de formatação explícita na solicitação. | Especificar o output desejado (ex: *"Responda no formato Markdown com listas e negrito"*). |
+| MISTURA DE CONCEITOS: A IA misturou reserva com investimentos de alto risco. | Prompt não delimitava o objetivo de segurança e liquidez. | Adicionou-se a restrição: *"Considere apenas opções de baixa volatilidade e alta liquidez mencionadas nos PDFs"*. |
+| RESPOSTAS LONGAS: Textos extensos e difíceis de revisar rápido. | Falta de formatação explícita. | Foi exigido o formato de **tabela** e **listas com marcadores**. |
 
 ---
 
-##  Miniguia de Estudo (Entrega Final)
+## 📖 Miniguia de Estudo (Entrega Final)
 
 ### 1. Resumo Estruturado do Conteúdo
 
-* **O que é RAG:** Técnica que conecta um Modelo de Linguagem (LLM) a fontes de dados externas para recuperar informações atualizadas antes de gerar uma resposta.
-* **Por que utilizar:** Reduz alucinações, permite manter a privacidade dos dados e evita o custo elevado de treinar novamente um modelo do zero.
-* **Fluxo de Funcionamento:**
-  1. *Ingestão:* Documentos são convertidos em vetores (*embeddings*).
-  2. *Busca:* A pergunta do usuário busca os trechos mais relevantes no banco vetorial.
-  3. *Geração:* A IA lê a pergunta + trechos recuperados e gera a resposta fundamentada.
+* **Orçamento Consciente (Regra 50-30-20):**  
+  * **50% Necessidades:** Gastos essenciais (moradia, alimentação básica, saúde, transporte).
+  * **30% Desejos Pessoais:** Lazer, estilo de vida, assinaturas.
+  * **20% Prioridades Financeiras:** Quitação de dívidas ou investimentos/reserva.
+* **Reserva de Emergência:**  
+  * Montante correspondente a **3 a 6 meses do custo de vida mensal**.
+  * Deve estar alocada em aplicações com **liquidez imediata (diária)** e **baixo risco** (ex: Tesouro Selic, CDB 100% CDI com resgate diário).
 
-### 2. Glossário Técnico
+### 2. Glossário de Conceitos Básicos
 
-* **Grounding (Ancoragem):** Processo de restringir as respostas do modelo estritamente a um conjunto de dados ou documentos fornecidos.
-* **Embeddings:** Representação numérica (vetorial) de textos que permite à IA medir a similaridade semântica entre termos.
-* **Hallucination (Alucinação):** Quando o modelo gera informações convincentes, porém falsas ou não sustentadas pelas fontes.
-* **Prompt Injection:** Risco de segurança onde comandos maliciosos dentro dos documentos tentam alterar o comportamento da IA.
+* **Liquidez:** A facilidade e rapidez com que um ativo/investimento pode ser convertido em dinheiro disponível sem perda relevante de valor.
+* **CDI (Certificado de Depósito Interbancário):** Taxa de juros sintética que baliza a rentabilidade de grande parte dos investimentos de renda fixa.
+* **Inflação (IPCA):** A taxa de variação dos preços de bens e serviços. Investimentos precisam render acima dela para garantir ganho real.
+* **Taxa Selic:** A taxa básica de juros da economia brasileira, definida pelo Banco Central.
 
-### 3. Prompts Reutilizáveis para Revisões Futuras
+### 3. Biblioteca de Prompts Reutilizáveis
 
 ```markdown
-# Biblioteca de Prompts para o NotebookLM
+#  Prompts para Revisão do Caderno Financeiro
 
-## Prompt 1: Extração de Conceitos Chave
-"A partir dos documentos anexados, liste os 5 principais conceitos técnicos abordados e crie uma definição de uma frase para cada um."
+## Prompt 1: Simulação de Caso Prático
+"Com base nos materiais de finanças, atue como um educador financeiro. Tenho uma renda mensal de X e custos fixos de Y. Como devo organizar meus aportes segundo as fontes?"
 
-## Prompt 2: Simulado de Fixação
-"Crie 3 perguntas no formato múltipla escolha baseadas nas fontes. Não forneça as respostas imediatamente; aguarde eu responder para corrigir."
+## Prompt 2: Comparador de Conceitos
+"Crie uma tabela comparativa resumindo as diferenças entre Poupança, Tesouro Selic e CDB de liquidez diária com base apenas no material carregado."
 
-## Prompt 3: Resumo Executivo
-"Sintetize os pontos principais deste caderno em um texto de até 200 palavras, estruturado em parágrafos curtos com tópicos em negrito."
+## Prompt 3: Questionário de Fixação
+"Gere 5 perguntas de múltipla escolha sobre o conteúdo de educação financeira para eu testar meu aprendizado. Mostre o gabarito apenas no final."
