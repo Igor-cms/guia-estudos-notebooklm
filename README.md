@@ -32,7 +32,7 @@ Para alimentar o caderno no NotebookLM, foram selecionadas 4 fontes abertas e co
 
 ---
 
-##  Engenharia de Prompts e "Cicatrizes" (Troubleshooting)
+##  Engenharia de Prompts 
 
 Abaixo estão registrados os testes de prompts realizados durante as consultas ao NotebookLM:
 
@@ -53,7 +53,7 @@ Abaixo estão registrados os testes de prompts realizados durante as consultas a
 
 ---
 
-## 📖 Miniguia de Estudo (Entrega Final)
+##  Miniguia de Estudo (Entrega Final)
 
 ### 1. Resumo Estruturado do Conteúdo
 
